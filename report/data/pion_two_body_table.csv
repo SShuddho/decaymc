@@ -1,0 +1,4 @@
+Decay,Quantity,Analytic (MeV),Simulation (MeV),Abs diff (MeV)
+pi0 -> gamma gamma,E_gamma,67.488400000000,67.488400000000,0.000e+00
+pi+ -> mu+ nu,E_mu,109.778249090123,109.778249090123,0.000e+00
+pi+ -> mu+ nu,E_nu,29.792140909877,29.792140909877,0.000e+00
