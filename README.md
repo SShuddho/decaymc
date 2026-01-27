@@ -113,6 +113,16 @@ print("conservation residual [dE, dpx, dpy, dpz]:", res)
 print("max |residual|:", np.max(np.abs(res)))
 ```
 
+---
+
+## Technical Report
+
+A full technical report documenting the physics, numerical methods, and validation
+of this package is included in the repository:
+
+- **PDF**: [`report/report.pdf`](report/report.pdf)
+
+Supporting files (figures/data/scripts) are under `report/`.
 
 ---
 
