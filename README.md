@@ -1,5 +1,11 @@
 # decaymc
 
+[![CI](https://github.com/SShuddho/decaymc/actions/workflows/ci.yml/badge.svg)](https://github.com/SShuddho/decaymc/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+
+
+
 A simple Monte Carlo framework for relativistic particle decays and scattering,
 designed to emphasize physical transparency, explicit assumptions, and validation against
 analytic benchmarks.
@@ -64,7 +70,7 @@ The focus is methodological clarity rather than phenomenological completeness.
 
 ## Numerical and Design Philosophy
 
-The code follows a physics-first design philosophy:
+The design philosophy:
 - physical assumptions are stated explicitly,
 - numerical methods are implemented transparently,
 - validation precedes optimization,
@@ -72,12 +78,6 @@ The code follows a physics-first design philosophy:
 
 Where naive Monte Carlo sampling is inefficient, importance sampling strategies are derived
 and implemented explicitly.
-
----
-
-## License
-
-This project is released under the MIT License. See the LICENSE file for details.
 
 
 ---
@@ -89,3 +89,39 @@ Clone the repository and install in editable mode:
 ```bash
 pip install -e .
 ```
+
+## Quickstart
+
+Generate a Michel-weighted muon decay event in the muon rest frame and verify
+four-momentum conservation.
+
+```python
+import numpy as np
+
+from decaymc.decay import sample_muon_decay_michel, check_conservation_for_decay
+from decaymc.constants import M_MU, M_E
+
+rng = np.random.default_rng(123)
+
+P_e, P_nu1, P_nu2, tries = sample_muon_decay_michel(M_MU, M_E, rng=rng)
+
+res = check_conservation_for_decay(M_MU, [P_e, P_nu1, P_nu2])
+
+print("tries:", tries)
+print("electron four-momentum [E, px, py, pz] (MeV):", P_e)
+print("conservation residual [dE, dpx, dpy, dpz]:", res)
+print("max |residual|:", np.max(np.abs(res)))
+```
+
+
+---
+
+## License
+
+This project is released under the MIT License. See the LICENSE file for details.
+
+---
+
+## Citing
+
+If you use this software, please cite it using the provided `CITATION.cff` file.
