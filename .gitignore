@@ -1,23 +1,34 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.venv/
-env/
-venv/
-
-# Packaging
-build/
-dist/
 *.egg-info/
+dist/
+build/
+.venv/
+.env
 
-# OS/editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Pytest
+.pytest_cache/
 
+
+notebooks/
+examples/
+
+# Old paper draft (keep ignored)
 paper/
+
+# LaTeX build artifacts anywhere
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Keep report source local only (do not track)
+report/build.sh
+report/clean.sh
+report/references.bib
+report/report.tex
 
