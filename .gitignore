@@ -14,8 +14,6 @@ build/
 notebooks/
 examples/
 
-# Old paper draft (keep ignored)
-paper/
 
 # LaTeX build artifacts anywhere
 *.aux

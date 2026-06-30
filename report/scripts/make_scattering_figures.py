@@ -3,7 +3,7 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
-from particle_mc.scattering import (
+from decaymc.scattering import (
     dsigma_dOmega_rutherford,
     sigma_quadrature_rutherford,
     sigma_mc_rutherford,

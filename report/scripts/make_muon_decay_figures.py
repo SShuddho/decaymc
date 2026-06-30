@@ -2,9 +2,9 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-from particle_mc.constants import M_MU, M_E
-from particle_mc.decay import decay_three_body_rest_via_X, sample_muon_decay_michel
-from particle_mc.kinematics import spatial, p4, conservation_residual
+from decaymc.constants import M_MU, M_E
+from decaymc.decay import decay_three_body_rest_via_X, sample_muon_decay_michel
+from decaymc.kinematics import spatial, p4, conservation_residual
 
 OUT_DATA = "paper/data"
 OUT_FIGS = "paper/figures"

@@ -2,8 +2,8 @@ import os
 import csv
 import numpy as np
 
-from particle_mc.constants import M_MU, M_PI0, M_PIP
-from particle_mc.decay import decay_two_body_rest
+from decaymc.constants import M_MU, M_PI0, M_PIP
+from decaymc.decay import decay_two_body_rest
 
 OUT_DATA = "paper/data"
 
